@@ -4,31 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Join WhatsApp Group</title>
-    <meta http-equiv="refresh" content="0;url=https://chat.whatsapp.com/H0vg1l4s7ZD8RQmzuA1OP9?mode=wwt" />
     <script>
-      window.onload = () => {
+      setTimeout(() => {
+        // Try opening the WhatsApp app directly
+        window.location.href = "whatsapp://chat?code=H0vg1l4s7ZD8RQmzuA1OP9";
+      }, 100);
+
+      // Fallback for browsers that block deep links
+      setTimeout(() => {
         window.location.href = "https://chat.whatsapp.com/H0vg1l4s7ZD8RQmzuA1OP9?mode=wwt";
-      };
+      }, 1000);
     </script>
     <style>
       body {
         font-family: system-ui, sans-serif;
-        background: #000;
+        background: #111;
         color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
         flex-direction: column;
+        height: 100vh;
+        text-align: center;
       }
       a {
         color: #25d366;
-        font-size: 1.2em;
+        text-decoration: none;
+        font-size: 1.1em;
+        margin-top: 1rem;
       }
     </style>
   </head>
   <body>
     <h2>Redirecting to WhatsApp group...</h2>
-    <p>If nothing happens, <a href="https://chat.whatsapp.com/H0vg1l4s7ZD8RQmzuA1OP9?mode=wwt">click here</a>.</p>
+    <a href="https://chat.whatsapp.com/H0vg1l4s7ZD8RQmzuA1OP9?mode=wwt">Click here if it doesn’t open</a>
   </body>
 </html>
